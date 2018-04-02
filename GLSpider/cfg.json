@@ -1,0 +1,3 @@
+[
+{"title":"//body/div[@class='w-max ct mb20']/div[2]/div[2]/h1[@id='abcde']/text()","subtitle":"//body/div[@class='w-max ct mb20']/div[2]/div[2]/div[@class='ft14 mt c93c']/text()","price":"//body/div[@class='w-max ct mb20']/div[2]/div[2]/div[2]/div[2]/span[@id='goods-sale-price']/text()"}
+]
