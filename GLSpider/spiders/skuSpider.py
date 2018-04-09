@@ -53,8 +53,7 @@ class skuSpider(CrawlSpider):
             docDict['uri'] = response.url
             docDict['local'] = "true"
 
-                print(k)
-                print(skuXPath[k])
+            for k in skuXPath.keys():
                 try:
                     meta[k] = response.xpath(skuXPath[k]).extract_first().strip("\n").strip(" ")
                 except:
