@@ -16,17 +16,35 @@ SPIDER_MODULES = ['GLSpider.spiders']
 NEWSPIDER_MODULE = 'GLSpider.spiders'
 
 
-ALLOWED_DOMAINS = ['epet.com',]
-START_URLS = ['http://www.epet.com']
+# 导入用户自定义设置
+import json
+with open('d:/settings.json') as f:
+    settings = json.load(f)
 
-# 需要爬取的domain字段，针对url
-ALLOWRULE = '' 
+##############################################################
+#*****************用户自定义参数部分*************************#
+# 站点限制
+ALLOWED_DOMAINS = [settings['ALLOWED_DOMAINS'],]
+
+# 起始网址
+START_URLS = [settings['START_URLS'],]
 
 # url页面解析规则
-PAGERULE = 'http://item.+.html$'
+PAGERULE = settings['PAGERULE']
 
 # html文件存储文件夹
-FOLDER = "epet"
+FOLDER = settings['FOLDER']
+
+# 抓取指定数量的Item之后终止爬虫
+#CLOSESPIDER_ITEMCOUNT = settings['CLOSESPIDER_ITEMCOUNT']
+
+# 指定时间之后终止爬虫
+#CLOSESPIDER_TIMEOUT = settings['CLOSESPIDER_TIMEOUT']
+
+# 商品单品解析xpath
+SKUXPATH = settings['SKUXPATH']
+#*************************结束*******************************#
+##############################################################
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
 # USER_AGENT = 'Mozilla/5.0 (X11; Linux x86_64; rv:45.0) Gecko/20100101 Firefox/45.0'
@@ -153,3 +171,7 @@ DOWNLOAD_ITMEOUT = 15
 # 禁止重定向
 #REDIRECT_ENABLED = False
 
+
+# 如果为 True，进程所有的标准输出(及错误)将会被重定向到log中。
+# 例如，执行 print "hello" ，其将会在Scrapy log中显示
+#LOG_STDOUT = True

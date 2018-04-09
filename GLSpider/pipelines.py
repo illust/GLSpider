@@ -20,6 +20,7 @@ class html2FilePipeline(object):
         with open('%s/%s.html' % (folder,file_name), 'w+b') as f:
             f.write(item['html'])
 
+
 class skuItemPipeline(object):
 	def process_item(self,item,sku):
 		return item
