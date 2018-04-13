@@ -6,9 +6,6 @@ from scrapy.utils.project import get_project_settings
 import json
 import re
 
-import logging
-
-logger = logging.Logger("GLSpider")
 
 # 商品sku爬虫
 class skuSpider(CrawlSpider):

@@ -15,7 +15,6 @@ BOT_NAME = 'GLSpider'
 SPIDER_MODULES = ['GLSpider.spiders']
 NEWSPIDER_MODULE = 'GLSpider.spiders'
 
-
 # 导入用户自定义设置
 import json
 with open('d:/settings.json') as f:
@@ -36,7 +35,7 @@ PAGERULE = settings['PAGERULE']
 FOLDER = settings['FOLDER']
 
 # 抓取指定数量的Item之后终止爬虫
-#CLOSESPIDER_ITEMCOUNT = settings['CLOSESPIDER_ITEMCOUNT']
+CLOSESPIDER_ITEMCOUNT = settings['CLOSESPIDER_ITEMCOUNT']
 
 # 指定时间之后终止爬虫
 #CLOSESPIDER_TIMEOUT = settings['CLOSESPIDER_TIMEOUT']
