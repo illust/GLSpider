@@ -1,0 +1,29 @@
+{
+"START_URL":"http://www.epet.com",
+"ALLOWED_DOMAINS":"epet.com",
+
+"INCLUDE":".*item.*.html$",
+"EXCLUDE":".*product.*",
+
+"COLLECTION":"",
+"FILENAME":"epet",
+
+"BDFUPLOAD":"YES",
+"t":"8D839EB9C4765ACEEB1EDCBAF8D44031",
+
+"CLOSESPIDER_ITEMCOUNT":200,
+
+"EXTRACTPATTERN":{"selOnePt":"ptmatch1",
+		"ptmatch1":
+			{"field":".*item.*.html$",
+			"title":"//body/div[@class='w-max ct mb20']/div[2]/div[2]/h1[@id='abcde']/text()",
+			"subtitle":"//body/div[@class='w-max ct mb20']/div[2]/div[2]/div[@class='ft14 mt c93c']/text()",
+			"price":"//body/div[@class='w-max ct mb20']/div[2]/div[2]/div[2]/div[2]/span[@id='goods-sale-price']/text()"
+			},
+		 "ptmatch2":
+			{"field":".*comment.*.html#$",
+			"title":"/html/body/div[3]/div[3]/a[2]/text()",
+			"score":"//*[@id='reply_display']/ul/li[1]/center[1]/text()"
+			}
+		 }
+}

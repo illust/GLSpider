@@ -1,0 +1,4 @@
+recursive-include GLSpider/xxx *
+recursive-include GLSpider/middlewares *
+include scrapy.cfg
+global-exclude __pycache__ *.py[cod]
